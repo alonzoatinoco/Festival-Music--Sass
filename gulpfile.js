@@ -1,16 +1,27 @@
-const { series } = require('gulp');
+const { series, src, dest, watch } = require('gulp');
+//dest--> ubicacion donde se guardara
+const sass = require('gulp-dart-sass');
 
-function css(done){
-    console.log('Compilando.... SASS');
-    done();
+//Funcion que compila SASS
+
+function css( ) {
+    return src('src/scss/app.scss')
+        .pipe( sass() )
+        .pipe( dest('./build/css') )
 }
-function js(done){
-    console.log('Compilando en JavaScript');
-    done();
+function minificarcss() {
+    return src('src/scss/app.scss')
+        .pipe( sass({
+            outputStyle: 'compressed'
+        }) )
+        .pipe( dest('./build/css') )
+}
+function watchArchivo() {
+    watch( 'src/scss/app.scss', css )
 }
 
-exports.css = css;
-exports.js = js;
-exports.default = series(css, js);//por defecto se ejecutara
+exports.css = css;//compilador del sass al css
+exports.minificarcss = minificarcss;//minificador
+exports.watchArchivo = watchArchivo;//compilador automatico
 
 
