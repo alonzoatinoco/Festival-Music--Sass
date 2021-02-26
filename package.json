@@ -15,6 +15,7 @@
   "author": "Diego Alonzo Abregú Tinoco",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.0.2"
   }
 }
