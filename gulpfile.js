@@ -17,7 +17,7 @@ function minificarcss() {
         .pipe( dest('./build/css') )
 }
 function watchArchivo() {
-    watch( 'src/scss/app.scss', css )
+    watch( 'src/scss/**/*.scss', css )//* la carpeta actual -- ** todos los archivos con la extension
 }
 
 exports.css = css;//compilador del sass al css
