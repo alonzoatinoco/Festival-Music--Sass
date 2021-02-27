@@ -371,9 +371,12 @@ img {
   max-width: 100%;
 }
 
+h1, h2, h3 {
+  margin: 0%;
+}
+
 h1 {
   font-size: 4rem;
-  font-weight: 900;
 }
 
 h2 {
@@ -382,4 +385,30 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+.header {
+  background-color: #4cb8b3;
+}
+.header .contenido-header {
+  padding: 2.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  color: #fff;
+}
+
+.navegacion-principal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+}
+.navegacion-principal a {
+  color: #fff;
+  font-size: 2rem;
+}
+.navegacion-principal a:hover {
+  color: #fef46d;
 }
