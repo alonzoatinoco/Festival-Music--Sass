@@ -2,13 +2,19 @@
     background-color: $verde;
     .contenido-header{
         padding: $separacion /2 0;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include m-tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
     h1{
         color: $blanco;
+        margin-bottom: 1rem;
+        text-align: center;
+        @include m-tablet{
+            margin-bottom: 0%;
+        }
     }
 }
 .navegacion-principal{
@@ -18,6 +24,7 @@
     a{
         color: $blanco;
         font-size: 2rem;
+        text-align: center;
         &:hover{
             color: $amarillo;
         }

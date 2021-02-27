@@ -1,0 +1,15 @@
+@mixin m-mobile {
+    @media(min-width:$mobile){
+        @content;
+    }
+}
+@mixin m-tablet {
+    @media(min-width:$tablet){
+        @content;
+    }
+}
+@mixin m-desktop {
+    @media(min-width:$desktop){
+        @content;
+    }
+}
