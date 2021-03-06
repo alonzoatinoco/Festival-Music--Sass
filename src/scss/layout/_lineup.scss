@@ -17,7 +17,7 @@
         @include grid(2,$separacion);
     }
     .escenario{
-        padding: $separacion /2;
+        padding: $separacion /2 0;
     }
     .nombre-escenario{
         color: $negro;
@@ -45,4 +45,25 @@
     &::after{
         background-image: url(../img/icono_rock.png);
     }
+}
+
+.calendario{
+    padding: 0;
+    list-style: none;
+    li{
+        padding: $separacion/ 2 ;
+        font-weight: $F-bold;
+        span{
+            font-weight: $F-regular;
+        }
+    }
+}
+
+.bg-verde .calendario li:nth-child(odd){
+    background-color: darken($verde, 10);
+}
+
+.bg-amarillo .calendario li:nth-child(odd){
+    background-color: darken($amarillo, 10);
+    //darken-->aumentes la intensidad oscureciendo
 }

@@ -536,7 +536,7 @@ h3 {
   }
 }
 .escenario-contenedor .escenario {
-  padding: 2.5rem;
+  padding: 2.5rem 0;
 }
 .escenario-contenedor .nombre-escenario {
   color: #000;
@@ -560,4 +560,24 @@ h3 {
 
 .rock .nombre-escenario::after {
   background-image: url(../img/icono_rock.png);
+}
+
+.calendario {
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario li span {
+  font-weight: 400;
+}
+
+.bg-verde .calendario li:nth-child(odd) {
+  background-color: #3b9691;
+}
+
+.bg-amarillo .calendario li:nth-child(odd) {
+  background-color: #fef03a;
 }
