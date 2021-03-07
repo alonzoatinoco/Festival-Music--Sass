@@ -8,6 +8,9 @@ html{
 body{
     font-family: $Fuente-Principal;
     font-size: 1.6rem;
+    &.fijar-body{
+        overflow: hidden;
+    }
 }
 p{
     font-size: 2rem;
